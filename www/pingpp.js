@@ -3,7 +3,7 @@
  * Author: Tong Chia
  * License: Apache License 2.0
  * */
-var exec = require('cordova/exec');
+//var exec = require('cordova/exec');
 
 module.exports = {
     /**
@@ -13,6 +13,6 @@ module.exports = {
      */
     createPayment: function (charge, successCallback, errorCallback) {
          if (typeof charge === 'object') { charge = JSON.stringify(charge); }
-         exec(successCallback, errorCallback, "PingppPlugin", "createPayment", [charge]);
+         corodva.exec(successCallback, errorCallback, "PingppPlugin", "createPayment", [charge]);
     }
 };
